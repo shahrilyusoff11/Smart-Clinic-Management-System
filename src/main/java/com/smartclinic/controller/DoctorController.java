@@ -24,4 +24,16 @@ public class DoctorController {
         List<String> availableTimes = doctorService.getAvailableTimeSlots(id, date);
         return ResponseEntity.ok(availableTimes);
     }
+
+    @GetMapping
+    public ResponseEntity<List<com.smartclinic.model.Doctor>> getAllDoctors() {
+        return ResponseEntity.ok(doctorService.getAllDoctors());
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<com.smartclinic.model.Doctor>> getDoctorsBySpecialtyAndTime(
+            @RequestParam String specialty, 
+            @RequestParam String time) {
+        return ResponseEntity.ok(doctorService.getDoctorsBySpecialtyAndTime(specialty, time));
+    }
 }

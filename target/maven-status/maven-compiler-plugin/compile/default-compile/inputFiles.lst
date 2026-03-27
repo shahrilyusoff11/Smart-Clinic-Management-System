@@ -9,6 +9,7 @@ C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\secu
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\model\Doctor.java
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\controller\PrescriptionController.java
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\repository\DoctorRepository.java
+C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\controller\AppointmentController.java
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\repository\PatientRepository.java
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\repository\PrescriptionRepository.java
 C:\Vibe Coding\Smart Clinic Management System\src\main\java\com\smartclinic\dto\PrescriptionRequest.java

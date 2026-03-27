@@ -20,5 +20,6 @@ com\smartclinic\dto\LoginRequest.class
 com\smartclinic\model\Prescription.class
 com\smartclinic\SmartClinicApplication.class
 com\smartclinic\repository\PrescriptionRepository.class
+com\smartclinic\controller\AppointmentController.class
 com\smartclinic\security\SecurityConfig.class
 com\smartclinic\model\Doctor.class

@@ -42,4 +42,12 @@ public class DoctorService {
         }
         throw new RuntimeException("Invalid credentials");
     }
+
+    public List<Doctor> getAllDoctors() {
+        return doctorRepository.findAll();
+    }
+
+    public List<Doctor> getDoctorsBySpecialtyAndTime(String specialty, String time) {
+        return doctorRepository.findBySpecialtyAndAvailableTime(specialty, time);
+    }
 }

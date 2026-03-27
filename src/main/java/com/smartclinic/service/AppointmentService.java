@@ -27,4 +27,8 @@ public class AppointmentService {
         LocalDateTime endOfDay = date.plusDays(1).atStartOfDay();
         return appointmentRepository.findByDoctorIdAndAppointmentTimeBetween(doctorId, startOfDay, endOfDay);
     }
+
+    public List<Appointment> getAppointmentsForPatient(String email) {
+        return appointmentRepository.findByPatientEmail(email);
+    }
 }
