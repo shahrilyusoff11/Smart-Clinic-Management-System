@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     
     private final DoctorService doctorService;
+    private final com.smartclinic.security.TokenService tokenService;
 
-    public AuthController(DoctorService doctorService) {
+    public AuthController(DoctorService doctorService, com.smartclinic.security.TokenService tokenService) {
         this.doctorService = doctorService;
+        this.tokenService = tokenService;
     }
 
     @PostMapping("/doctor/login")
@@ -28,13 +30,15 @@ public class AuthController {
     
     @PostMapping("/patient/login")
     public ResponseEntity<AuthResponse> patientLogin(@RequestBody LoginRequest loginRequest) {
-        // Return dummy token for frontend testing
-        return ResponseEntity.ok(new AuthResponse("dummy-patient-token-12345", "ROLE_PATIENT"));
+        // Return real JWT for curl testing
+        String token = tokenService.generateToken(loginRequest.getEmail());
+        return ResponseEntity.ok(new AuthResponse(token, "ROLE_PATIENT"));
     }
 
     @PostMapping("/admin/login")
     public ResponseEntity<AuthResponse> adminLogin(@RequestBody LoginRequest loginRequest) {
-        // Return dummy token for frontend testing
-        return ResponseEntity.ok(new AuthResponse("dummy-admin-token-12345", "ROLE_ADMIN"));
+        // Return real JWT for curl testing
+        String token = tokenService.generateToken(loginRequest.getEmail());
+        return ResponseEntity.ok(new AuthResponse(token, "ROLE_ADMIN"));
     }
 }
