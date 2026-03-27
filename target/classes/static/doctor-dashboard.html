@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Doctor Dashboard</h2>
+        <p>Your Booked Appointments</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentsList">
+                <tr>
+                    <td>John Doe</td>
+                    <td>2026-03-30 10:00 AM</td>
+                    <td><span class="badge">SCHEDULED</span></td>
+                    <td><button style="margin:0; padding:8px;">Prescribe</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="index.html" class="link">Logout</a>
+    </div>
+</body>
+</html>

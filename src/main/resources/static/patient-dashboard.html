@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Patient Dashboard</h2>
+        <p>Find a Doctor</p>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="searchBar" placeholder="Search doctor by name...">
+            <button onclick="searchDoctor()" style="width: auto; margin-top: 10px;">Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Specialty</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="doctorDetails">
+                <tr>
+                    <td>Dr. Alice Smith</td>
+                    <td>Cardiology</td>
+                    <td><button style="margin:0; padding:8px;">Book Appt</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="index.html" class="link">Logout</a>
+    </div>
+    <script>
+        function searchDoctor() {
+            alert('Searching for: ' + document.getElementById('searchBar').value);
+        }
+    </script>
+</body>
+</html>

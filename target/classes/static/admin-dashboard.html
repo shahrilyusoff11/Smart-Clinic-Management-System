@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <p>Add a New Doctor</p>
+        <form id="addDoctorForm" style="max-width: 500px;">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Doctor Email" required>
+            <input type="password" id="password" placeholder="Temporary Password" required>
+            <input type="text" id="specialty" placeholder="Specialty" required>
+            <button type="submit">Add Doctor</button>
+        </form>
+        <a href="index.html" class="link">Logout</a>
+    </div>
+    <script>
+        document.getElementById('addDoctorForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            alert("Doctor added successfully!");
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
